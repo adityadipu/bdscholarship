@@ -9,14 +9,15 @@
     <!-- Load Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script>
+        // Updated function to handle navigation
         function openTracker(id) {
             if (id === 'Erasmus Mundus') {
+                // Navigates to the erasmus.html page we just created
                 window.location.href = 'erasmus.html';
             } else {
+                // Shows an alert for the inactive cards
                 alert(`The ` + id + ` tracker is coming soon!`);
             }
-        }
-            alert(`This will navigate to the ` + id + ` tracker page once you build it!`);
         }
     </script>
 </head>
