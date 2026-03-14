@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chevening Scholarship Tracker</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        input[type="checkbox"] {
+            accent-color: #6366f1; /* indigo-500 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 font-sans pb-12">
+
+    <!-- Header -->
+    <header class="bg-indigo-900 text-white py-8 shadow-md relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <a href="index.html" class="inline-flex items-center gap-2 text-indigo-200 hover:text-white transition-colors mb-4 text-sm font-medium">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+            <h1 class="text-3xl font-bold flex items-center gap-3">
+                <i class="ph-fill ph-briefcase text-yellow-400 text-4xl"></i>
+                Chevening Scholarship (UK)
+            </h1>
+            <p class="mt-2 text-indigo-200 text-lg">Track your 4 essays, university applications, and work experience criteria.</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 mt-8 space-y-8">
+        
+        <!-- Timeline Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                <i class="ph-fill ph-calendar text-indigo-600 text-2xl"></i> Application Timeline
+            </h2>
+            <div class="flex flex-wrap gap-3">
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-indigo-100 text-indigo-800 border border-indigo-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">App Opens</div>
+                    <div class="text-sm font-semibold mt-1">Aug - Nov</div>
+                </div>
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-slate-100 text-slate-800 border border-slate-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Shortlisting</div>
+                    <div class="text-sm font-semibold mt-1">Feb - Apr</div>
+                </div>
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-amber-100 text-amber-800 border border-amber-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Interview Results</div>
+                    <div class="text-sm font-semibold mt-1">June</div>
+                </div>
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-green-100 text-green-800 border border-green-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Final Offer</div>
+                    <div class="text-sm font-semibold mt-1">July</div>
+                </div>
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-blue-100 text-blue-800 border border-blue-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Travel / Class Starts</div>
+                    <div class="text-sm font-semibold mt-1">September</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Left Column -->
+            <div class="space-y-8">
+                
+                <!-- Eligibility & Conditions Section -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 border-l-4 border-l-red-500">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-warning-circle text-red-500 text-2xl"></i> Eligibility & Conditions
+                    </h2>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5 text-lg"></i>
+                            <span><strong>Undergraduate Degree:</strong> Equivalent to a UK 2:1 classification.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5 text-lg"></i>
+                            <span><strong>Course Duration:</strong> Usually 1-year Master's program.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5 text-lg"></i>
+                            <div>
+                                <strong>Work Experience: Minimum 2 years.</strong>
+                                <p class="text-xs text-slate-500 mt-1">Can include full-time, part-time, internship, volunteer, paid, or unpaid. Does not have to be related to your previous field (but must explain career change).</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2 mt-4 pt-3 border-t border-slate-100">
+                            <i class="ph-fill ph-airplane-tilt text-red-500 mt-0.5 text-lg"></i>
+                            <div>
+                                <strong>Post-Scholarship Condition:</strong>
+                                <p class="text-xs text-slate-500 mt-1">Must return to Bangladesh and work there for at least 2 years. Graduate Route Visa is NOT allowed.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Document Checklist -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-files text-indigo-600 text-2xl"></i> Required Documents
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="chev-doc-1" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">Bachelor's Certificate</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="chev-doc-2" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">Bachelor's Transcripts</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="chev-doc-3" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">Passport</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="chev-doc-4" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">CV / Resume</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="chev-doc-5" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <div>
+                                <span class="text-sm font-medium text-slate-700 block">Personal Statement</span>
+                                <span class="text-xs text-slate-500">Only if required by the university</span>
+                            </div>
+                        </label>
+                        <div class="p-3 bg-indigo-50 rounded-lg border border-indigo-100">
+                            <p class="text-xs text-indigo-700"><strong>Note on IELTS:</strong> Not mandatory for the scholarship itself, but usually required by the university.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- References Guide -->
+                <section class="bg-indigo-50 rounded-xl shadow-sm p-6 border border-indigo-200">
+                    <h2 class="text-lg font-bold mb-3 flex items-center gap-2 text-indigo-900">
+                        <i class="ph-fill ph-envelope-open text-indigo-600 text-2xl"></i> Reference Letters (2 Required)
+                    </h2>
+                    <p class="text-xs text-indigo-800 mb-3">Must be uploaded <strong>after</strong> receiving an interview call. Checked by the British Embassy.</p>
+                    
+                    <div class="bg-white p-3 rounded border border-indigo-100 text-sm text-slate-700 space-y-2">
+                        <p><strong>Address to:</strong> The British High Commissioner, Dhaka</p>
+                        <p class="font-semibold border-t border-slate-100 pt-2">Must Include:</p>
+                        <ul class="list-disc list-inside text-xs space-y-1 text-slate-600">
+                            <li>Referee contact details (address, email, phone)</li>
+                            <li>How long they've known you & relationship capacity</li>
+                            <li>Date of last contact</li>
+                            <li>Endorsement covering: Leadership, Networking, Skills, Personal/Intellectual qualities</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                
+                <!-- The 4 Essays -->
+                <section class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-sm p-6 text-white border border-slate-700">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-white">
+                        <i class="ph-fill ph-pen-nib text-indigo-400 text-2xl"></i> The 4 Core Essays
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-600">
+                            <label class="flex items-start gap-3 cursor-pointer">
+                                <input type="checkbox" id="chev-essay-1" class="w-5 h-5 mt-1 rounded save-state">
+                                <div>
+                                    <span class="text-base font-bold text-white block mb-1">1. Leadership & Influence</span>
+                                    <p class="text-xs text-slate-300">Demonstrate leadership experience in Education, Work life, or Community activities.</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-600">
+                            <label class="flex items-start gap-3 cursor-pointer">
+                                <input type="checkbox" id="chev-essay-2" class="w-5 h-5 mt-1 rounded save-state">
+                                <div>
+                                    <span class="text-base font-bold text-white block mb-1">2. Networking</span>
+                                    <p class="text-xs text-slate-300">Explain your professional/academic networking skills and how you build/maintain relationships.</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-600">
+                            <label class="flex items-start gap-3 cursor-pointer">
+                                <input type="checkbox" id="chev-essay-3" class="w-5 h-5 mt-1 rounded save-state">
+                                <div>
+                                    <span class="text-base font-bold text-white block mb-1">3. Why Study in the UK?</span>
+                                    <p class="text-xs text-slate-300">Explain why the UK is best (academic excellence, cultural diversity) and why you chose your specific courses.</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-600">
+                            <label class="flex items-start gap-3 cursor-pointer">
+                                <input type="checkbox" id="chev-essay-4" class="w-5 h-5 mt-1 rounded save-state">
+                                <div>
+                                    <span class="text-base font-bold text-white block mb-1">4. Career Goals</span>
+                                    <p class="text-xs text-slate-300">Clearly explain your short-term, mid-term, and long-term career goals.</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3 Universities Target -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-2 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-buildings text-indigo-600 text-2xl"></i> Target Universities
+                    </h2>
+                    <p class="text-xs text-slate-500 mb-4">Choose 3 Master's courses in 3 different UK universities. Apply to them separately. <strong>You must eventually get at least 1 unconditional offer.</strong></p>
+                    
+                    <div class="space-y-4">
+                        <!-- University 1 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <span class="text-xs font-bold text-indigo-500 uppercase tracking-wider mb-2 block">Choice 1</span>
+                            <input type="text" id="chev-uni-1" placeholder="University Name & Course..." class="w-full bg-transparent border-b border-slate-300 focus:border-indigo-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="chev-uni-1-app" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Applied</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="chev-uni-1-offer" class="w-4 h-4 rounded text-green-600 save-state">
+                                    <span class="text-xs font-semibold text-green-700">Unconditional Offer</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- University 2 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <span class="text-xs font-bold text-indigo-500 uppercase tracking-wider mb-2 block">Choice 2</span>
+                            <input type="text" id="chev-uni-2" placeholder="University Name & Course..." class="w-full bg-transparent border-b border-slate-300 focus:border-indigo-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="chev-uni-2-app" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Applied</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="chev-uni-2-offer" class="w-4 h-4 rounded text-green-600 save-state">
+                                    <span class="text-xs font-semibold text-green-700">Unconditional Offer</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- University 3 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <span class="text-xs font-bold text-indigo-500 uppercase tracking-wider mb-2 block">Choice 3</span>
+                            <input type="text" id="chev-uni-3" placeholder="University Name & Course..." class="w-full bg-transparent border-b border-slate-300 focus:border-indigo-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="chev-uni-3-app" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Applied</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="chev-uni-3-offer" class="w-4 h-4 rounded text-green-600 save-state">
+                                    <span class="text-xs font-semibold text-green-700">Unconditional Offer</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Javascript to handle saving progress automatically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Handle Checkboxes
+            const checkboxes = document.querySelectorAll('.save-state');
+            checkboxes.forEach(box => {
+                const saved = localStorage.getItem(box.id);
+                if (saved === 'true') box.checked = true;
+                
+                box.addEventListener('change', (e) => {
+                    localStorage.setItem(e.target.id, e.target.checked);
+                    updateStrikeThrough(e.target);
+                });
+                updateStrikeThrough(box);
+            });
+
+            // Handle Text Inputs
+            const textInputs = document.querySelectorAll('.save-text');
+            textInputs.forEach(input => {
+                const savedText = localStorage.getItem(input.id);
+                if (savedText) input.value = savedText;
+
+                input.addEventListener('input', (e) => {
+                    localStorage.setItem(e.target.id, e.target.value);
+                });
+            });
+
+            function updateStrikeThrough(checkbox) {
+                let textTarget = checkbox.nextElementSibling;
+                if(textTarget && textTarget.tagName === 'DIV') {
+                    textTarget = textTarget.querySelector('span'); // Targets first span inside div
+                }
+
+                if(textTarget && textTarget.tagName === 'SPAN') {
+                    if(checkbox.checked) {
+                        textTarget.classList.add('line-through', 'opacity-60');
+                    } else {
+                        textTarget.classList.remove('line-through', 'opacity-60');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
