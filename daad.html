@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAAD Scholarship Tracker</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        input[type="checkbox"] {
+            accent-color: #eab308; /* yellow-500 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 font-sans pb-12">
+
+    <!-- Header -->
+    <header class="bg-yellow-600 text-white py-8 shadow-md relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <a href="index.html" class="inline-flex items-center gap-2 text-yellow-100 hover:text-white transition-colors mb-4 text-sm font-medium">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+            <h1 class="text-3xl font-bold flex items-center gap-3">
+                <i class="ph-fill ph-book-open text-yellow-200 text-4xl"></i>
+                DAAD Scholarship (EPOS)
+            </h1>
+            <p class="mt-2 text-yellow-100 text-lg">Track your notarised documents, requirements, and application to German Universities.</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 mt-8 space-y-8">
+        
+        <!-- Important Notice Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 flex items-start gap-4">
+            <div class="p-3 bg-yellow-50 text-yellow-600 rounded-full shrink-0">
+                <i class="ph-fill ph-warning-circle text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="font-bold text-slate-800">Critical Submission Rules & Links</h3>
+                <p class="text-sm text-slate-600 mt-1 mb-3">You must apply <strong>directly to the university</strong>, not to DAAD. Some programs require physical courier submission. <strong>Always send notarised copies, NEVER original documents.</strong></p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?daad&detail=50076777&intention&origin&page=1&q=epos&status&subjectGrps" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-2 rounded transition-colors shadow-sm">
+                        <i class="ph ph-link"></i> Official EPOS Course Database
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Left Column -->
+            <div class="space-y-8">
+                
+                <!-- Basic Requirements -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 border-l-4 border-l-yellow-500">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-list-checks text-yellow-600 text-2xl"></i> Basic Eligibility
+                    </h2>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5 text-lg"></i>
+                            <span><strong>Education:</strong> Must hold a Bachelor's Degree.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5 text-lg"></i>
+                            <span><strong>Work Experience:</strong> Minimum 2 years of relevant work experience.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5 text-lg"></i>
+                            <span><strong>Study Gap:</strong> Not more than 6 years since graduation.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5 text-lg"></i>
+                            <span><strong>Language:</strong> IELTS score (depends on specific program requirements).</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Document Checklist: Academic & Personal -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-files text-yellow-600 text-2xl"></i> Documents & Forms
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 mt-4">Required Forms</div>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="daad-doc-1" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">DAAD Application Form</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="daad-doc-2" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">University / Program Application Form</span>
+                        </label>
+
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 mt-4">Personal Documents</div>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="daad-doc-3" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <div>
+                                <span class="text-sm font-medium text-slate-700 block">CV (Europass Format)</span>
+                                <span class="text-xs text-red-500 font-semibold">Must be hand-signed</span>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="daad-doc-4" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <div>
+                                <span class="text-sm font-medium text-slate-700 block">Motivation Letter</span>
+                                <span class="text-xs text-slate-500">Max 2 pages. MUST mention your 1st, 2nd, and 3rd choices.</span>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="daad-doc-5" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">IELTS Certificate</span>
+                        </label>
+                        
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 mt-4">Academic & Professional (Notarised!)</div>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="daad-doc-6" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">HSC / School Leaving Certificate</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="daad-doc-7" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">Bachelor's Degree Certificate</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="daad-doc-8" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">Academic Transcripts</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="daad-doc-9" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">Official Work Experience Certificate (2+ years)</span>
+                        </label>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                
+                <!-- Recommendation Letters -->
+                <section class="bg-yellow-50 rounded-xl shadow-sm p-6 border border-yellow-200">
+                    <h2 class="text-lg font-bold mb-3 flex items-center gap-2 text-yellow-900">
+                        <i class="ph-fill ph-envelope-open text-yellow-600 text-2xl"></i> Required Letters of Recommendation
+                    </h2>
+                    <div class="space-y-3 mt-4">
+                        <label class="flex items-start gap-3 p-3 bg-white rounded-lg border border-yellow-100 cursor-pointer transition-colors shadow-sm hover:border-yellow-300">
+                            <input type="checkbox" id="daad-lor-1" class="w-5 h-5 mt-0.5 rounded save-state">
+                            <span class="text-sm font-bold text-slate-700">LOR 1: From Workplace / Employer</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 bg-white rounded-lg border border-yellow-100 cursor-pointer transition-colors shadow-sm hover:border-yellow-300">
+                            <input type="checkbox" id="daad-lor-2" class="w-5 h-5 mt-0.5 rounded save-state">
+                            <span class="text-sm font-bold text-slate-700">LOR 2: From Academic Supervisor / Teacher</span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Program Choices Tracker -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-2 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-buildings text-yellow-600 text-2xl"></i> Top 3 Program Choices
+                    </h2>
+                    <p class="text-xs text-slate-500 mb-4">You can apply to a maximum of 3 programs. Make sure to clearly state your preference order (1st, 2nd, 3rd) in your Motivation Letter.</p>
+                    
+                    <div class="space-y-4">
+                        <!-- Choice 1 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <span class="text-xs font-bold text-yellow-600 uppercase tracking-wider mb-2 block">1st Choice Priority</span>
+                            <input type="text" id="daad-prog-1" placeholder="University & Program Name..." class="w-full bg-transparent border-b border-slate-300 focus:border-yellow-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="daad-prog-1-app" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Application Sent</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Choice 2 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <span class="text-xs font-bold text-yellow-600 uppercase tracking-wider mb-2 block">2nd Choice Priority</span>
+                            <input type="text" id="daad-prog-2" placeholder="University & Program Name..." class="w-full bg-transparent border-b border-slate-300 focus:border-yellow-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="daad-prog-2-app" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Application Sent</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Choice 3 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <span class="text-xs font-bold text-yellow-600 uppercase tracking-wider mb-2 block">3rd Choice Priority</span>
+                            <input type="text" id="daad-prog-3" placeholder="University & Program Name..." class="w-full bg-transparent border-b border-slate-300 focus:border-yellow-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="daad-prog-3-app" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Application Sent</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Optional / Conditional Docs -->
+                <section class="bg-slate-100 rounded-xl shadow-sm p-6 border border-slate-200 border-dashed">
+                    <h2 class="text-md font-bold mb-3 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-file-dashed text-slate-500 text-xl"></i> Conditional Documents
+                    </h2>
+                    <label class="flex items-start gap-3 p-3 bg-white rounded-lg border border-slate-200 cursor-pointer transition-colors shadow-sm">
+                        <input type="checkbox" id="daad-doc-opt-1" class="w-5 h-5 mt-0.5 rounded save-state">
+                        <div>
+                            <span class="text-sm font-bold text-slate-700 block">Research / Thesis Proposal</span>
+                            <span class="text-xs text-slate-500">Only if explicitly required by your specific program.</span>
+                        </div>
+                    </label>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Javascript to handle saving progress automatically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Handle Checkboxes
+            const checkboxes = document.querySelectorAll('.save-state');
+            checkboxes.forEach(box => {
+                const saved = localStorage.getItem(box.id);
+                if (saved === 'true') box.checked = true;
+                
+                box.addEventListener('change', (e) => {
+                    localStorage.setItem(e.target.id, e.target.checked);
+                    updateStrikeThrough(e.target);
+                });
+                updateStrikeThrough(box);
+            });
+
+            // Handle Text Inputs
+            const textInputs = document.querySelectorAll('.save-text');
+            textInputs.forEach(input => {
+                const savedText = localStorage.getItem(input.id);
+                if (savedText) input.value = savedText;
+
+                input.addEventListener('input', (e) => {
+                    localStorage.setItem(e.target.id, e.target.value);
+                });
+            });
+
+            function updateStrikeThrough(checkbox) {
+                let textTarget = checkbox.nextElementSibling;
+                if(textTarget && textTarget.tagName === 'DIV') {
+                    textTarget = textTarget.querySelector('span'); // Targets first span inside div
+                }
+
+                if(textTarget && textTarget.tagName === 'SPAN') {
+                    if(checkbox.checked) {
+                        textTarget.classList.add('line-through', 'opacity-60');
+                    } else {
+                        textTarget.classList.remove('line-through', 'opacity-60');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
