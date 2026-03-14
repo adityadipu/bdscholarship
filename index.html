@@ -21,6 +21,8 @@
                 window.location.href = 'daad.html';
             } else if (id === 'Eiffel Excellence') {
                 window.location.href = 'eiffel.html';
+            } else if (id === 'SISGP Scholarship') {
+                window.location.href = 'sisgp.html';
             } else {
                 alert(`The ` + id + ` tracker is coming soon!`);
             }
@@ -62,7 +64,7 @@
         <div class="flex justify-between items-center mb-8">
             <h2 class="text-2xl font-bold text-slate-800">Available Trackers</h2>
             <span class="text-sm font-semibold bg-slate-200 text-slate-700 px-4 py-1.5 rounded-full shadow-sm">
-                5 Active / 5 Total
+                6 Active / 6 Total
             </span>
         </div>
 
@@ -122,7 +124,7 @@
                 </div>
             </div>
 
-            <!-- Chevening Card (NOW ACTIVE) -->
+            <!-- Chevening Card (Active) -->
             <div onclick="openTracker('Chevening Scholarship')" class="relative overflow-hidden rounded-2xl border transition-all duration-300 bg-white border-slate-200 hover:border-indigo-300 hover:shadow-lg cursor-pointer group hover:-translate-y-1">
                 <div class="absolute -right-10 -top-10 w-32 h-32 rounded-full opacity-10 transition-transform duration-500 group-hover:scale-[2.5] bg-indigo-500"></div>
                 <div class="p-6 relative z-10">
@@ -149,7 +151,7 @@
                 </div>
             </div>
 
-            <!-- DAAD Card (NOW ACTIVE) -->
+            <!-- DAAD Card (Active) -->
             <div onclick="openTracker('DAAD Scholarship')" class="relative overflow-hidden rounded-2xl border transition-all duration-300 bg-white border-slate-200 hover:border-yellow-300 hover:shadow-lg cursor-pointer group hover:-translate-y-1">
                 <div class="absolute -right-10 -top-10 w-32 h-32 rounded-full opacity-10 transition-transform duration-500 group-hover:scale-[2.5] bg-yellow-500"></div>
                 <div class="p-6 relative z-10">
@@ -197,6 +199,33 @@
                     </p>
                     <div class="flex justify-end pt-4 border-t border-slate-100">
                         <div class="flex items-center gap-1.5 text-cyan-600 font-bold text-sm group-hover:translate-x-2 transition-transform">
+                            Open Tracker <i class="ph-bold ph-caret-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SISGP Scholarship Card (Active) -->
+            <div onclick="openTracker('SISGP Scholarship')" class="relative overflow-hidden rounded-2xl border transition-all duration-300 bg-white border-slate-200 hover:border-emerald-300 hover:shadow-lg cursor-pointer group hover:-translate-y-1">
+                <div class="absolute -right-10 -top-10 w-32 h-32 rounded-full opacity-10 transition-transform duration-500 group-hover:scale-[2.5] bg-emerald-500"></div>
+                <div class="p-6 relative z-10">
+                    <div class="flex justify-between items-start mb-5">
+                        <div class="p-3 rounded-xl shadow-sm bg-emerald-50 text-emerald-500">
+                            <i class="ph ph-books text-3xl"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-wide bg-green-100 text-green-700 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+                            <i class="ph-fill ph-check-circle"></i> Ready
+                        </span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">SISGP Scholarship</h3>
+                    <div class="text-sm font-semibold text-slate-500 mb-3 flex items-center gap-2">
+                        <span class="inline-block w-2 h-2 rounded-full bg-slate-400"></span> Sweden
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-8 min-h-[40px]">
+                        Fully funded scholarship for global professionals to pursue Master's degrees in Sweden.
+                    </p>
+                    <div class="flex justify-end pt-4 border-t border-slate-100">
+                        <div class="flex items-center gap-1.5 text-emerald-600 font-bold text-sm group-hover:translate-x-2 transition-transform">
                             Open Tracker <i class="ph-bold ph-caret-right"></i>
                         </div>
                     </div>
