@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISGP Scholarship Tracker</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        input[type="checkbox"] {
+            accent-color: #10b981; /* emerald-500 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 font-sans pb-12">
+
+    <!-- Header -->
+    <header class="bg-emerald-900 text-white py-8 shadow-md relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <a href="index.html" class="inline-flex items-center gap-2 text-emerald-200 hover:text-white transition-colors mb-4 text-sm font-medium">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+            <h1 class="text-3xl font-bold flex items-center gap-3">
+                <i class="ph-fill ph-books text-yellow-400 text-4xl"></i>
+                SISGP Scholarship (Sweden)
+            </h1>
+            <p class="mt-2 text-emerald-100 text-lg">Track your university admissions, documents, and 4 program choices for Sweden.</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 mt-8 space-y-8">
+        
+        <!-- Important Notice Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 flex items-start gap-4">
+            <div class="p-3 bg-emerald-50 text-emerald-600 rounded-full shrink-0">
+                <i class="ph-fill ph-info text-2xl"></i>
+            </div>
+            <div>
+                <h3 class="font-bold text-slate-800">Official Admissions Portal & Fees</h3>
+                <p class="text-sm text-slate-600 mt-1 mb-3">All applications go through the central Swedish admissions portal. Note that there is an application fee of <strong>900 SEK (~90 USD)</strong> required to process your application.</p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://www.universityadmissions.se/intl/start" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded transition-colors shadow-sm">
+                        <i class="ph ph-link"></i> UniversityAdmissions.se
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                <i class="ph-fill ph-calendar text-emerald-600 text-2xl"></i> Typical Application Timeline
+            </h2>
+            <div class="flex flex-wrap gap-3">
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-emerald-100 text-emerald-800 border border-emerald-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">App Opens</div>
+                    <div class="text-sm font-semibold mt-1">Aug - Sep</div>
+                </div>
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-red-100 text-red-800 border border-red-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">App Deadline</div>
+                    <div class="text-sm font-semibold mt-1">January</div>
+                </div>
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-amber-100 text-amber-800 border border-amber-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Doc Deadline</div>
+                    <div class="text-sm font-semibold mt-1">February</div>
+                </div>
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-blue-100 text-blue-800 border border-blue-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Results</div>
+                    <div class="text-sm font-semibold mt-1">Mar - Apr</div>
+                </div>
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-green-100 text-green-800 border border-green-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Classes Start</div>
+                    <div class="text-sm font-semibold mt-1">Aug - Sep</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Left Column -->
+            <div class="space-y-8">
+                
+                <!-- Eligibility & Conditions -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 border-l-4 border-l-emerald-500">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-list-checks text-emerald-600 text-2xl"></i> Program Requirements
+                    </h2>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5 text-lg"></i>
+                            <span><strong>Target Programs:</strong> Must choose Master's programs worth exactly <strong>120 credits (2 years)</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5 text-lg"></i>
+                            <span><strong>Quantity:</strong> Maximum of <strong>4 programs</strong> can be selected (same or different universities).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5 text-lg"></i>
+                            <span><strong>English Proficiency:</strong> Minimum IELTS score of 6.5.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-warning-circle text-amber-500 mt-0.5 text-lg"></i>
+                            <span><strong>Motivation Letters:</strong> Each chosen program requires a <em>separate</em> tailored motivation letter.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Document Checklist -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-files text-emerald-600 text-2xl"></i> Document Checklist
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="sisgp-doc-1" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">Degree Certificates</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="sisgp-doc-2" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <div>
+                                <span class="text-sm font-medium text-slate-700 block">Academic Transcripts</span>
+                                <span class="text-xs text-slate-500 font-semibold">Must be attested by the university.</span>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="sisgp-doc-3" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">CV / Resume</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="sisgp-doc-4" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <div>
+                                <span class="text-sm font-medium text-slate-700 block">Motivation Letters</span>
+                                <span class="text-xs text-slate-500 font-semibold">Prepare one tailored letter for each program chosen.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-red-50 rounded-lg border border-red-100 text-sm text-red-800">
+                        <strong>Postal Submission Warning:</strong> While most documents are uploaded online, some specific universities may require hard copies sent by post. In this case, send transcripts in one sealed envelope and certificates in another.
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                
+                <!-- Application Steps -->
+                <section class="bg-emerald-50 rounded-xl shadow-sm p-6 border border-emerald-200">
+                    <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-emerald-900">
+                        <i class="ph-fill ph-list-numbers text-emerald-600 text-2xl"></i> Online Application Steps
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="sisgp-step-1" class="w-5 h-5 mt-0.5 save-state">
+                            <span class="text-sm text-emerald-900">1. Go to UniversityAdmissions.se and create an account.</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="sisgp-step-2" class="w-5 h-5 mt-0.5 save-state">
+                            <div>
+                                <span class="text-sm text-emerald-900">2. Search for programs using filters:</span>
+                                <ul class="list-disc list-inside mt-1 text-emerald-700 text-xs">
+                                    <li>Intake: Autumn</li>
+                                    <li>Level: Master's</li>
+                                    <li>Credits: 120 credits (2 years)</li>
+                                </ul>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="sisgp-step-3" class="w-5 h-5 mt-0.5 save-state">
+                            <span class="text-sm text-emerald-900">3. Select up to 4 programs and rank them by preference.</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="sisgp-step-4" class="w-5 h-5 mt-0.5 save-state">
+                            <span class="text-sm text-emerald-900">4. Pay the 900 SEK Application Fee.</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="sisgp-step-5" class="w-5 h-5 mt-0.5 save-state">
+                            <span class="text-sm text-emerald-900">5. Upload all required documents in the portal.</span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Program Choices Tracker (Up to 4) -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-2 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-ranking text-emerald-600 text-2xl"></i> Top 4 Program Rankings
+                    </h2>
+                    <p class="text-xs text-slate-500 mb-4">Rank your choices carefully! You can apply to a maximum of 4 programs. The order of preference matters for admission allocation.</p>
+                    
+                    <div class="space-y-4">
+                        <!-- Choice 1 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2 block">Rank 1 (Top Choice)</span>
+                            <input type="text" id="sisgp-prog-1" placeholder="University & Program Name..." class="w-full bg-transparent border-b border-slate-300 focus:border-emerald-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="sisgp-prog-1-app" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Selected in Portal</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="sisgp-prog-1-mot" class="w-4 h-4 rounded text-emerald-600 save-state">
+                                    <span class="text-xs font-semibold text-emerald-700">Motivation Letter Done</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Choice 2 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2 block">Rank 2</span>
+                            <input type="text" id="sisgp-prog-2" placeholder="University & Program Name..." class="w-full bg-transparent border-b border-slate-300 focus:border-emerald-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="sisgp-prog-2-app" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Selected in Portal</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="sisgp-prog-2-mot" class="w-4 h-4 rounded text-emerald-600 save-state">
+                                    <span class="text-xs font-semibold text-emerald-700">Motivation Letter Done</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Choice 3 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2 block">Rank 3</span>
+                            <input type="text" id="sisgp-prog-3" placeholder="University & Program Name..." class="w-full bg-transparent border-b border-slate-300 focus:border-emerald-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="sisgp-prog-3-app" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Selected in Portal</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="sisgp-prog-3-mot" class="w-4 h-4 rounded text-emerald-600 save-state">
+                                    <span class="text-xs font-semibold text-emerald-700">Motivation Letter Done</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Choice 4 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2 block">Rank 4</span>
+                            <input type="text" id="sisgp-prog-4" placeholder="University & Program Name..." class="w-full bg-transparent border-b border-slate-300 focus:border-emerald-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="sisgp-prog-4-app" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Selected in Portal</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="sisgp-prog-4-mot" class="w-4 h-4 rounded text-emerald-600 save-state">
+                                    <span class="text-xs font-semibold text-emerald-700">Motivation Letter Done</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Javascript to handle saving progress automatically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.save-state');
+            checkboxes.forEach(box => {
+                const saved = localStorage.getItem(box.id);
+                if (saved === 'true') box.checked = true;
+                
+                box.addEventListener('change', (e) => {
+                    localStorage.setItem(e.target.id, e.target.checked);
+                    updateStrikeThrough(e.target);
+                });
+                updateStrikeThrough(box);
+            });
+
+            const textInputs = document.querySelectorAll('.save-text');
+            textInputs.forEach(input => {
+                const savedText = localStorage.getItem(input.id);
+                if (savedText) input.value = savedText;
+
+                input.addEventListener('input', (e) => {
+                    localStorage.setItem(e.target.id, e.target.value);
+                });
+            });
+
+            function updateStrikeThrough(checkbox) {
+                let textTarget = checkbox.nextElementSibling;
+                if(textTarget && textTarget.tagName === 'DIV') {
+                    textTarget = textTarget.querySelector('span'); 
+                }
+
+                if(textTarget && textTarget.tagName === 'SPAN') {
+                    if(checkbox.checked) {
+                        textTarget.classList.add('line-through', 'opacity-60');
+                    } else {
+                        textTarget.classList.remove('line-through', 'opacity-60');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
