@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEXT Scholarship Tracker</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        input[type="checkbox"] {
+            accent-color: #e11d48; /* rose-600 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 font-sans pb-12">
+
+    <!-- Header -->
+    <header class="bg-rose-900 text-white py-8 shadow-md relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <a href="index.html" class="inline-flex items-center gap-2 text-rose-200 hover:text-white transition-colors mb-4 text-sm font-medium">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+            <h1 class="text-3xl font-bold flex items-center gap-3">
+                <i class="ph-fill ph-flower-lotus text-rose-300 text-4xl"></i>
+                MEXT Scholarship (Japan)
+            </h1>
+            <p class="mt-2 text-rose-100 text-lg">Track your Japanese Government Scholarship application, required documents, and submission steps.</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 mt-8 space-y-8">
+        
+        <!-- Important Notice Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 flex items-start gap-4">
+            <div class="p-3 bg-rose-50 text-rose-600 rounded-full shrink-0">
+                <i class="ph-fill ph-info text-2xl"></i>
+            </div>
+            <div class="w-full">
+                <h3 class="font-bold text-slate-800 flex justify-between items-center">
+                    <span>Fully Funded Japanese Government Scholarship</span>
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded uppercase font-bold tracking-wider">No App Fee</span>
+                </h3>
+                <p class="text-sm text-slate-600 mt-1 mb-3">Covers full tuition fee, monthly stipend, and round-trip airfare. The official circular is typically published in May by the Japanese Embassy in Bangladesh.</p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://www.bd.emb-japan.go.jp/itpr_ja/00_000706.html" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold bg-rose-600 hover:bg-rose-700 text-white px-3 py-2 rounded transition-colors shadow-sm">
+                        <i class="ph ph-link"></i> Official Embassy Website
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                <i class="ph-fill ph-calendar text-rose-600 text-2xl"></i> Application Timeline
+            </h2>
+            <div class="flex flex-wrap gap-3">
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-rose-100 text-rose-800 border border-rose-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Circular & Apply</div>
+                    <div class="text-sm font-semibold mt-1">May</div>
+                </div>
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-amber-100 text-amber-800 border border-amber-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Written Exam</div>
+                    <div class="text-sm font-semibold mt-1">TBA (English Test)</div>
+                </div>
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-blue-100 text-blue-800 border border-blue-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Interview</div>
+                    <div class="text-sm font-semibold mt-1">TBA (Oral Exam)</div>
+                </div>
+                <div class="flex-1 min-w-[120px] p-3 rounded-lg text-center bg-green-100 text-green-800 border border-green-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Final Selection</div>
+                    <div class="text-sm font-semibold mt-1">MEXT Approval</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Left Column -->
+            <div class="space-y-8">
+                
+                <!-- Eligibility & Recommendation Types -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 border-l-4 border-l-rose-500">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-list-checks text-rose-600 text-2xl"></i> Eligibility & Pathways
+                    </h2>
+                    
+                    <div class="mb-5 space-y-2 text-sm text-slate-700">
+                        <p><i class="ph-bold ph-check text-green-500 mr-1"></i> Must have completed a Bachelor's degree.</p>
+                        <p><i class="ph-bold ph-check text-green-500 mr-1"></i> Strong academic background (CGPA ~3.5+ preferred).</p>
+                        <p><i class="ph-bold ph-info text-blue-500 mr-1"></i> English/Japanese knowledge beneficial (IELTS/TOEFL NOT mandatory).</p>
+                    </div>
+
+                    <h3 class="text-sm font-bold text-rose-800 mb-3 border-b border-rose-100 pb-1">Recommendation Types (Choose One)</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-rose-50 p-3 rounded border border-rose-100">
+                            <h4 class="font-bold text-slate-800 text-sm flex items-center gap-1"><i class="ph-fill ph-buildings"></i> 1. Embassy Recommendation</h4>
+                            <ul class="list-disc list-inside text-xs text-slate-600 mt-1 space-y-1">
+                                <li>Apply through the Japanese Embassy in BD.</li>
+                                <li>Embassy manages screening and placement.</li>
+                                <li><strong>Note:</strong> Usually no need to contact professors directly.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded border border-slate-200">
+                            <h4 class="font-bold text-slate-800 text-sm flex items-center gap-1"><i class="ph-fill ph-graduation-cap"></i> 2. University Recommendation</h4>
+                            <ul class="list-disc list-inside text-xs text-slate-600 mt-1 space-y-1">
+                                <li>Apply directly to a Japanese university.</li>
+                                <li><strong>Requires:</strong> Contacting professors & submitting a research proposal directly to them.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Document Checklist -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-files text-rose-600 text-2xl"></i> Document Checklist
+                    </h2>
+                    
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Required Documents</h3>
+                    <div class="space-y-3 mb-6">
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="mext-doc-1" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">1. Online Application Form</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="mext-doc-2" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">2. Passport or National ID (NID)</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="mext-doc-3" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">3. Undergraduate Certificate</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="mext-doc-4" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">4. Undergraduate Transcript</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="mext-doc-5" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">5. Police Clearance Certificate (Copy)</span>
+                        </label>
+                    </div>
+
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Optional but Highly Recommended</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 p-2 cursor-pointer">
+                            <input type="checkbox" id="mext-doc-opt-1" class="w-4 h-4 mt-0.5 save-state">
+                            <span class="text-sm text-slate-600">IELTS Certificate</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-2 cursor-pointer">
+                            <input type="checkbox" id="mext-doc-opt-2" class="w-4 h-4 mt-0.5 save-state">
+                            <span class="text-sm text-slate-600">Recommendation Letter</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-2 cursor-pointer">
+                            <input type="checkbox" id="mext-doc-opt-3" class="w-4 h-4 mt-0.5 save-state">
+                            <span class="text-sm text-slate-600">Study Plan / Research Proposal</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-2 cursor-pointer">
+                            <input type="checkbox" id="mext-doc-opt-4" class="w-4 h-4 mt-0.5 save-state">
+                            <span class="text-sm text-slate-600">Work Experience Certificate / Other Certificates</span>
+                        </label>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                
+                <!-- Application Steps & Physical Submission -->
+                <section class="bg-rose-50 rounded-xl shadow-sm p-6 border border-rose-200">
+                    <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-rose-900">
+                        <i class="ph-fill ph-list-numbers text-rose-600 text-2xl"></i> Application Steps
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="mext-step-1" class="w-5 h-5 mt-0.5 save-state">
+                            <span class="text-sm text-rose-900">1. Wait for official circular (May) by the Japanese Embassy.</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="mext-step-2" class="w-5 h-5 mt-0.5 save-state">
+                            <div>
+                                <span class="text-sm text-rose-900">2. Fill out the online application form with:</span>
+                                <ul class="list-disc list-inside mt-1 text-rose-700 text-xs pl-2">
+                                    <li>Program name</li>
+                                    <li>Field of study</li>
+                                    <li>Subject/research area</li>
+                                </ul>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="mext-step-3" class="w-5 h-5 mt-0.5 save-state">
+                            <span class="text-sm text-rose-900">3. Prepare all required and optional documents.</span>
+                        </label>
+                        
+                        <div class="mt-4 bg-white p-4 rounded-lg shadow-sm border border-red-200">
+                            <label class="flex items-start gap-3 cursor-pointer">
+                                <input type="checkbox" id="mext-step-4" class="w-5 h-5 mt-1 save-state">
+                                <div>
+                                    <span class="text-sm font-bold text-red-700 block">4. Physical Document Submission</span>
+                                    <p class="text-xs text-slate-600 mt-1 mb-2">Submit hard copies in an envelope within the deadline in May to this exact location:</p>
+                                    <div class="bg-slate-100 p-2 rounded border border-slate-200 text-sm font-medium text-slate-800 text-center">
+                                        বাংলাদেশ সচিবালয়<br>
+                                        ২ নং গেইট অভ্যর্থনা কক্ষের ৯ নং কাউন্টার বক্স
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Preparation Tips -->
+                <section class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-sm p-6 text-white border border-slate-700">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-white">
+                        <i class="ph-fill ph-lightbulb text-yellow-400 text-2xl"></i> Preparation Tips
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-slate-800/50 p-3 rounded-lg border border-slate-600 flex items-start gap-3">
+                            <i class="ph-fill ph-exam text-rose-400 text-xl shrink-0 mt-0.5"></i>
+                            <p class="text-sm text-slate-200">Practice previous years' written exam questions (English Test is crucial).</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-3 rounded-lg border border-slate-600 flex items-start gap-3">
+                            <i class="ph-fill ph-files text-rose-400 text-xl shrink-0 mt-0.5"></i>
+                            <p class="text-sm text-slate-200">Prepare a strong, detailed study plan or research proposal.</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-3 rounded-lg border border-slate-600 flex items-start gap-3">
+                            <i class="ph-fill ph-crosshair text-rose-400 text-xl shrink-0 mt-0.5"></i>
+                            <p class="text-sm text-slate-200">Apply in a field closely related to your previous academic background.</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-3 rounded-lg border border-slate-600 flex items-start gap-3">
+                            <i class="ph-fill ph-users-three text-rose-400 text-xl shrink-0 mt-0.5"></i>
+                            <p class="text-sm text-slate-200">Review subject-related materials thoroughly before the oral interview.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Javascript to handle saving progress automatically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.save-state');
+            checkboxes.forEach(box => {
+                const saved = localStorage.getItem(box.id);
+                if (saved === 'true') box.checked = true;
+                
+                box.addEventListener('change', (e) => {
+                    localStorage.setItem(e.target.id, e.target.checked);
+                    updateStrikeThrough(e.target);
+                });
+                updateStrikeThrough(box);
+            });
+
+            function updateStrikeThrough(checkbox) {
+                let textTarget = checkbox.nextElementSibling;
+                if(textTarget && textTarget.tagName === 'DIV') {
+                    textTarget = textTarget.querySelector('span'); 
+                }
+
+                if(textTarget && textTarget.tagName === 'SPAN') {
+                    if(checkbox.checked) {
+                        textTarget.classList.add('line-through', 'opacity-60');
+                    } else {
+                        textTarget.classList.remove('line-through', 'opacity-60');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
