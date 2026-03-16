@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GKS Scholarship Tracker</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        input[type="checkbox"] {
+            accent-color: #c026d3; /* fuchsia-600 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 font-sans pb-12">
+
+    <!-- Header -->
+    <header class="bg-fuchsia-900 text-white py-8 shadow-md relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <a href="index.html" class="inline-flex items-center gap-2 text-fuchsia-200 hover:text-white transition-colors mb-4 text-sm font-medium">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+            <h1 class="text-3xl font-bold flex items-center gap-3">
+                <i class="ph-fill ph-map-pin-line text-yellow-400 text-4xl"></i>
+                Global Korea Scholarship (GKS)
+            </h1>
+            <p class="mt-2 text-fuchsia-100 text-lg">Track your 3-year Master's program application, mandatory hardcopy submissions, and required forms.</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 mt-8 space-y-8">
+        
+        <!-- Important Notice Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 flex items-start gap-4">
+            <div class="p-3 bg-red-50 text-red-600 rounded-full shrink-0">
+                <i class="ph-fill ph-warning text-2xl"></i>
+            </div>
+            <div class="w-full">
+                <h3 class="font-bold text-slate-800 flex justify-between items-center">
+                    <span>Critical Rule: Hardcopy Submission ONLY</span>
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded uppercase font-bold tracking-wider">Fully Funded</span>
+                </h3>
+                <p class="text-sm text-slate-600 mt-1 mb-3">There is <strong>no online application</strong> for GKS. All applications must be sent by physical post (hard copy). The scholarship duration is 3 years (1 year Korean language training + 2 years Master's study).</p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://www.studyinkorea.go.kr/ko/notice/scholarshipsList.do?boardSort=3" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-3 py-2 rounded transition-colors shadow-sm">
+                        <i class="ph ph-link"></i> Study in Korea Official Website
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tracks & Timeline Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                <i class="ph-fill ph-git-branch text-fuchsia-600 text-2xl"></i> Application Tracks (Choose ONE)
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-fuchsia-50 border border-fuchsia-100 p-4 rounded-lg">
+                    <h3 class="font-bold text-fuchsia-900 mb-1 flex items-center gap-2"><i class="ph-fill ph-bank"></i> 1. Embassy Track</h3>
+                    <ul class="text-sm text-slate-700 space-y-1 mt-2">
+                        <li><strong>Apply via:</strong> Korean Embassy in Bangladesh</li>
+                        <li><strong>Deadline:</strong> Around February</li>
+                        <li><strong>Quota:</strong> ~5 candidates</li>
+                        <li class="text-xs text-fuchsia-700 mt-2 font-semibold">Max 3 university choices (At least one must be Type B).</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg">
+                    <h3 class="font-bold text-slate-800 mb-1 flex items-center gap-2"><i class="ph-fill ph-buildings"></i> 2. University Track</h3>
+                    <ul class="text-sm text-slate-700 space-y-1 mt-2">
+                        <li><strong>Apply via:</strong> Directly to Korean universities</li>
+                        <li><strong>Deadline:</strong> Feb - Apr (varies by university)</li>
+                        <li><strong>Quota:</strong> ~9 candidates</li>
+                        <li class="text-xs text-slate-500 mt-2 font-semibold">If you fail Embassy Track Round 1, you CAN apply to Univ Track in the same year.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Left Column -->
+            <div class="space-y-8">
+                
+                <!-- Eligibility & Preferences -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 border-l-4 border-l-fuchsia-500">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-list-checks text-fuchsia-600 text-2xl"></i> Eligibility & Extra Points
+                    </h2>
+                    
+                    <div class="space-y-3 text-sm text-slate-700 mb-4 pb-4 border-b border-slate-100">
+                        <p class="flex items-center gap-2"><i class="ph-bold ph-check text-green-500"></i> <strong>Minimum CGPA:</strong> 2.64</p>
+                        <p class="flex items-center gap-2"><i class="ph-bold ph-check text-green-500"></i> <strong>IELTS / TOEFL:</strong> Not mandatory</p>
+                        <p class="flex items-center gap-2"><i class="ph-bold ph-check text-green-500"></i> <strong>Korean Language:</strong> Not required initially</p>
+                    </div>
+
+                    <h3 class="text-sm font-bold text-fuchsia-800 mb-2">You receive EXTRA PREFERENCE if you have:</h3>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div class="bg-fuchsia-50 p-2 rounded border border-fuchsia-100 text-fuchsia-900 font-medium">TOPIK Level 3 or higher</div>
+                        <div class="bg-fuchsia-50 p-2 rounded border border-fuchsia-100 text-fuchsia-900 font-medium">IELTS/TOEFL Score</div>
+                        <div class="bg-fuchsia-50 p-2 rounded border border-fuchsia-100 text-fuchsia-900 font-medium">Science/Engineering Bg</div>
+                        <div class="bg-fuchsia-50 p-2 rounded border border-fuchsia-100 text-fuchsia-900 font-medium">Low-income family bg</div>
+                    </div>
+                </section>
+
+                <!-- Document Checklist -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-files text-fuchsia-600 text-2xl"></i> Hardcopy Document Checklist
+                    </h2>
+                    <p class="text-xs text-red-600 mb-4 bg-red-50 p-2 rounded border border-red-100 font-bold">
+                        Ensure ALL academic documents are Notarised copies. Do not send un-notarised academic docs.
+                    </p>
+
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Required Official Forms</h3>
+                    <div class="space-y-2 mb-4">
+                        <label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-slate-50 rounded transition-colors">
+                            <input type="checkbox" id="gks-doc-1" class="w-4 h-4 mt-0.5 save-state text-fuchsia-600">
+                            <span class="text-sm text-slate-700 font-bold">Application Form</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-slate-50 rounded transition-colors">
+                            <input type="checkbox" id="gks-doc-2" class="w-4 h-4 mt-0.5 save-state text-fuchsia-600">
+                            <span class="text-sm text-slate-700 font-bold">Personal Statement (Form 2)</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-slate-50 rounded transition-colors">
+                            <input type="checkbox" id="gks-doc-3" class="w-4 h-4 mt-0.5 save-state text-fuchsia-600">
+                            <span class="text-sm text-slate-700 font-bold">Statement of Purpose</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-slate-50 rounded transition-colors">
+                            <input type="checkbox" id="gks-doc-4" class="w-4 h-4 mt-0.5 save-state text-fuchsia-600">
+                            <span class="text-sm text-slate-700 font-bold">Letter of Recommendation (Form 5)</span>
+                        </label>
+                    </div>
+
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Notarised Academic Docs</h3>
+                    <div class="space-y-2 mb-4">
+                        <label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-slate-50 rounded transition-colors">
+                            <input type="checkbox" id="gks-doc-5" class="w-4 h-4 mt-0.5 save-state">
+                            <span class="text-sm text-slate-700">Bachelor's / Master's Transcripts</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-slate-50 rounded transition-colors">
+                            <input type="checkbox" id="gks-doc-6" class="w-4 h-4 mt-0.5 save-state">
+                            <span class="text-sm text-slate-700">Degree Certificates</span>
+                        </label>
+                    </div>
+
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Identification Documents</h3>
+                    <div class="space-y-2 mb-4 bg-slate-50 p-3 rounded border border-slate-200">
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" id="gks-doc-7" class="w-4 h-4 mt-0.5 save-state">
+                            <span class="text-sm text-slate-700">Applicant Passport Copy</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer mt-2">
+                            <input type="checkbox" id="gks-doc-8" class="w-4 h-4 mt-0.5 save-state">
+                            <span class="text-sm text-slate-700">Applicant NID Copy</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer mt-2">
+                            <input type="checkbox" id="gks-doc-9" class="w-4 h-4 mt-0.5 save-state text-red-500">
+                            <span class="text-sm font-bold text-red-700">Parents' NID Copies (Mandatory)</span>
+                        </label>
+                    </div>
+
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Optional Certificates</h3>
+                    <div class="grid grid-cols-2 gap-2">
+                        <label class="flex items-start gap-2 p-2 cursor-pointer"><input type="checkbox" id="gks-doc-10" class="w-4 h-4 save-state"><span class="text-xs text-slate-600">TOPIK Score</span></label>
+                        <label class="flex items-start gap-2 p-2 cursor-pointer"><input type="checkbox" id="gks-doc-11" class="w-4 h-4 save-state"><span class="text-xs text-slate-600">IELTS/TOEFL</span></label>
+                        <label class="flex items-start gap-2 p-2 cursor-pointer"><input type="checkbox" id="gks-doc-12" class="w-4 h-4 save-state"><span class="text-xs text-slate-600">Publications</span></label>
+                        <label class="flex items-start gap-2 p-2 cursor-pointer"><input type="checkbox" id="gks-doc-13" class="w-4 h-4 save-state"><span class="text-xs text-slate-600">Awards</span></label>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                
+                <!-- Essays & Formatting Rules -->
+                <section class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-sm p-6 text-white border border-slate-700">
+                    <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-white">
+                        <i class="ph-fill ph-text-aa text-fuchsia-400 text-2xl"></i> Strict Essay Formatting Rules
+                    </h2>
+                    <div class="mb-4 flex items-center gap-4 bg-slate-800 p-2 rounded">
+                        <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300 border border-slate-600">Font: Times New Roman</span>
+                        <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300 border border-slate-600">Size: 11</span>
+                        <span class="text-xs bg-slate-700 px-2 py-1 rounded text-slate-300 border border-slate-600">Spacing: Single</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-600">
+                            <h3 class="font-bold text-fuchsia-300 text-sm mb-2">Personal Statement (Form 2) - 1 Page</h3>
+                            <ul class="list-disc list-inside text-xs text-slate-300 space-y-1">
+                                <li>Motivation for applying & Family/Education bg.</li>
+                                <li>Significant experiences, achievements.</li>
+                                <li>Influential people/events in your life.</li>
+                                <li>Extracurriculars (clubs, volunteering, work).</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-600">
+                            <h3 class="font-bold text-fuchsia-300 text-sm mb-2">Statement of Purpose - Max 2 Pages</h3>
+                            <ul class="list-disc list-inside text-xs text-slate-300 space-y-1">
+                                <li><strong>1. Language Plan:</strong> How you'll learn Korean in Yr 1.</li>
+                                <li><strong>2. Study Plan:</strong> Why this field? Plan for Yr 1, Yr 2, Final Yr.</li>
+                                <li><strong>3. Future Plan:</strong> Career goals, sector, how GKS helps.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recommendation Letter Rules -->
+                <section class="bg-amber-50 rounded-xl shadow-sm p-6 border border-amber-200">
+                    <h2 class="text-md font-bold mb-3 flex items-center gap-2 text-amber-900">
+                        <i class="ph-fill ph-envelope-open text-amber-600 text-xl"></i> Recommendation Letter (Form 5)
+                    </h2>
+                    <p class="text-sm text-amber-800 mb-3">Requires <strong>Two</strong> recommendation letters (Prof, Dept Head, Employer, or Supervisor).</p>
+                    
+                    <div class="bg-white p-3 rounded shadow-sm border border-amber-200 text-sm">
+                        <strong class="text-red-600">Crucial Submission Format:</strong><br>
+                        For EACH letter, you must submit:<br>
+                        <span class="font-bold text-slate-800 text-lg">1 Original + 3 Photocopies</span> (Total 4 copies per letter).<br><br>
+                        The letters MUST include a signature, institutional seal, and be inside a <strong>sealed envelope</strong>.
+                    </div>
+                </section>
+
+                <!-- Postal Submission (Embassy Track) -->
+                <section class="bg-fuchsia-50 rounded-xl shadow-sm p-6 border border-fuchsia-200">
+                    <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-fuchsia-900">
+                        <i class="ph-fill ph-envelope-simple text-fuchsia-600 text-2xl"></i> Embassy Track Submission
+                    </h2>
+                    
+                    <div class="space-y-2 mb-4">
+                        <label class="flex items-start gap-2 cursor-pointer p-1 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="gks-sub-1" class="w-4 h-4 mt-0.5 save-state">
+                            <span class="text-xs text-fuchsia-900">Download Excel sheet & check program availability ("O" = Available, "X" = Not). Ensure it is 100% English.</span>
+                        </label>
+                        <label class="flex items-start gap-2 cursor-pointer p-1 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="gks-sub-2" class="w-4 h-4 mt-0.5 save-state">
+                            <span class="text-xs text-fuchsia-900">Arrange documents in the exact order of the checklist.</span>
+                        </label>
+                        <label class="flex items-start gap-2 cursor-pointer p-1 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="gks-sub-3" class="w-4 h-4 mt-0.5 save-state">
+                            <span class="text-xs text-fuchsia-900">Write Name, Address, Email, Mobile on the main Envelope.</span>
+                        </label>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-fuchsia-200">
+                        <h4 class="font-bold text-slate-800 text-sm mb-2"><i class="ph-fill ph-map-pin"></i> Send Hard Copy to:</h4>
+                        <div class="text-sm text-slate-700 bg-slate-50 p-3 rounded border border-slate-200 font-medium">
+                            Embassy of the Republic of Korea in Bangladesh<br>
+                            4 Madani Avenue, Baridhara<br>
+                            Dhaka-1212, Bangladesh<br><br>
+                            <span class="text-xs font-normal text-slate-500">Tel: (+8802) 5881-2088~90<br>Office Hours: 09:00-12:30, 14:00-17:00 (Sun-Thu)</span>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Javascript to handle saving progress automatically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.save-state');
+            checkboxes.forEach(box => {
+                const saved = localStorage.getItem(box.id);
+                if (saved === 'true') box.checked = true;
+                
+                box.addEventListener('change', (e) => {
+                    localStorage.setItem(e.target.id, e.target.checked);
+                    updateStrikeThrough(e.target);
+                });
+                updateStrikeThrough(box);
+            });
+
+            function updateStrikeThrough(checkbox) {
+                let textTarget = checkbox.nextElementSibling;
+                if(textTarget && textTarget.tagName === 'DIV') {
+                    textTarget = textTarget.querySelector('span'); 
+                }
+
+                if(textTarget && textTarget.tagName === 'SPAN') {
+                    if(checkbox.checked) {
+                        textTarget.classList.add('line-through', 'opacity-60');
+                    } else {
+                        textTarget.classList.remove('line-through', 'opacity-60');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
