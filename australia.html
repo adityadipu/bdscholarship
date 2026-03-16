@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Australia Awards Tracker</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        input[type="checkbox"] {
+            accent-color: #0d9488; /* teal-600 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 font-sans pb-12">
+
+    <!-- Header -->
+    <header class="bg-teal-900 text-white py-8 shadow-md relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <a href="index.html" class="inline-flex items-center gap-2 text-teal-200 hover:text-white transition-colors mb-4 text-sm font-medium">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+            <h1 class="text-3xl font-bold flex items-center gap-3">
+                <i class="ph-fill ph-map-pin text-yellow-400 text-4xl"></i>
+                Australia Awards Scholarship
+            </h1>
+            <p class="mt-2 text-teal-100 text-lg">Track your eligibility, verified documents, and application for Master's programs in Australia.</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 mt-8 space-y-8">
+        
+        <!-- Important Notice Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 flex items-start gap-4">
+            <div class="p-3 bg-teal-50 text-teal-600 rounded-full shrink-0">
+                <i class="ph-fill ph-info text-2xl"></i>
+            </div>
+            <div class="w-full">
+                <h3 class="font-bold text-slate-800 flex justify-between items-center">
+                    <span>Fully Online Application</span>
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded uppercase font-bold tracking-wider">Fully Funded</span>
+                </h3>
+                <p class="text-sm text-slate-600 mt-1 mb-3">Applicants must first complete an <strong>eligibility check</strong> by answering a few questions on the official website before proceeding with the application.</p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://australiaawardsbangladesh.org/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold bg-teal-600 hover:bg-teal-700 text-white px-3 py-2 rounded transition-colors shadow-sm">
+                        <i class="ph ph-link"></i> Official Bangladesh Portal
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                <i class="ph-fill ph-calendar text-teal-600 text-2xl"></i> Application Timeline
+            </h2>
+            <div class="flex flex-wrap gap-3">
+                <div class="flex-1 min-w-[120px] p-4 rounded-lg text-center bg-teal-100 text-teal-800 border border-teal-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Application Deadline</div>
+                    <div class="text-sm font-bold mt-1">Around April 30</div>
+                    <div class="text-xs mt-1 opacity-70">Varies slightly each year</div>
+                </div>
+                <div class="flex-1 min-w-[120px] p-4 rounded-lg text-center bg-amber-100 text-amber-800 border border-amber-200">
+                    <div class="text-xs font-bold uppercase tracking-wider opacity-80">Fields of Study</div>
+                    <div class="text-sm font-bold mt-1">Check Official Circular</div>
+                    <div class="text-xs mt-1 opacity-70">Strictly limited to priority fields</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Left Column -->
+            <div class="space-y-8">
+                
+                <!-- Eligibility & Conditions -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 border-l-4 border-l-teal-500">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-list-checks text-teal-600 text-2xl"></i> Strict Eligibility Criteria
+                    </h2>
+                    
+                    <ul class="space-y-4 text-sm text-slate-700">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-briefcase text-teal-500 mt-0.5 text-xl"></i>
+                            <div>
+                                <strong>Work Experience</strong>
+                                <p class="text-slate-600">Minimum <strong>5 years</strong> of full-time relevant work experience.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-graduation-cap text-teal-500 mt-0.5 text-xl"></i>
+                            <div>
+                                <strong>Program Level</strong>
+                                <p class="text-slate-600">Applicants must apply to <strong>Master's programs only</strong>.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-translate text-teal-500 mt-0.5 text-xl"></i>
+                            <div>
+                                <strong>English Proficiency</strong>
+                                <p class="text-slate-600">Minimum IELTS score of <strong>6.5</strong>.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 pt-3 border-t border-slate-100">
+                            <i class="ph-fill ph-airplane-tilt text-red-500 mt-0.5 text-xl"></i>
+                            <div>
+                                <strong>Return Condition</strong>
+                                <p class="text-slate-600">After completing the degree, scholars MUST return to Bangladesh and stay for at least <strong>2 years</strong>.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Document Format Note -->
+                <section class="bg-amber-50 rounded-xl shadow-sm p-6 border border-amber-200">
+                    <h2 class="text-lg font-bold mb-2 flex items-center gap-2 text-amber-900">
+                        <i class="ph-fill ph-file-doc text-amber-600 text-2xl"></i> Document Formatting Rules
+                    </h2>
+                    <p class="text-sm text-amber-800">
+                        The official document templates and formats are provided in <strong>Word files</strong> directly on the scholarship website. Ensure you use ONLY their provided templates for CVs, LORs, etc.
+                    </p>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+
+                <!-- Document Checklist -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-files text-teal-600 text-2xl"></i> Required Documents
+                    </h2>
+                    
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Identification & Language</h3>
+                    <div class="space-y-3 mb-5">
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="aus-doc-1" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">Passport</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="aus-doc-2" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">IELTS Certificate (6.5+)</span>
+                        </label>
+                    </div>
+
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Verified Academic Records</h3>
+                    <div class="p-3 mb-3 bg-red-50 rounded border border-red-100 text-xs text-red-700">
+                        <strong>Important:</strong> Academic documents must be scanned copies of VERIFIED originals.
+                    </div>
+                    <div class="space-y-3 mb-5">
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="aus-doc-3" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">Original Academic Certificates (Scan Copy - Verified)</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="aus-doc-4" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">Academic Transcripts (Scan Copy - Verified)</span>
+                        </label>
+                    </div>
+
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Professional & References</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="aus-doc-5" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-medium text-slate-700">CV / Resume (Use official template)</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg border border-slate-200 cursor-pointer transition-colors">
+                            <input type="checkbox" id="aus-doc-6" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <div>
+                                <span class="text-sm font-bold text-slate-800 block">2 Letters of Recommendation (LOR)</span>
+                                <span class="text-xs text-slate-600">Must include exactly <strong>One Academic</strong> referee and <strong>One Professional</strong> referee.</span>
+                            </div>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Research Program Specifics -->
+                <section class="bg-teal-50 rounded-xl shadow-sm p-6 border border-teal-200">
+                    <h2 class="text-lg font-bold mb-3 flex items-center gap-2 text-teal-900">
+                        <i class="ph-fill ph-microscope text-teal-600 text-2xl"></i> Applying for Research Master's?
+                    </h2>
+                    <p class="text-sm text-teal-800 mb-4">If you are applying for a Research-Based Master's degree, you have an additional mandatory step.</p>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-teal-100">
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" id="aus-research-proof" class="w-5 h-5 mt-1 rounded save-state text-teal-600">
+                            <div>
+                                <span class="text-sm font-bold text-slate-800 block">Provide Supervisorship Proof</span>
+                                <p class="text-xs text-slate-600 mt-1">You must contact a supervisor in Australia beforehand. You must upload written proof of supervisorship from the university or professor.</p>
+                            </div>
+                        </label>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Javascript to handle saving progress automatically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.save-state');
+            checkboxes.forEach(box => {
+                const saved = localStorage.getItem(box.id);
+                if (saved === 'true') box.checked = true;
+                
+                box.addEventListener('change', (e) => {
+                    localStorage.setItem(e.target.id, e.target.checked);
+                    updateStrikeThrough(e.target);
+                });
+                updateStrikeThrough(box);
+            });
+
+            function updateStrikeThrough(checkbox) {
+                let textTarget = checkbox.nextElementSibling;
+                if(textTarget && textTarget.tagName === 'DIV') {
+                    textTarget = textTarget.querySelector('span'); 
+                }
+
+                if(textTarget && textTarget.tagName === 'SPAN') {
+                    if(checkbox.checked) {
+                        textTarget.classList.add('line-through', 'opacity-60');
+                    } else {
+                        textTarget.classList.remove('line-through', 'opacity-60');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
