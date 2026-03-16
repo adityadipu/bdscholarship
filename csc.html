@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC Scholarship Tracker</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        input[type="checkbox"] {
+            accent-color: #ea580c; /* orange-600 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 font-sans pb-12">
+
+    <!-- Header -->
+    <header class="bg-orange-900 text-white py-8 shadow-md relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <a href="index.html" class="inline-flex items-center gap-2 text-orange-200 hover:text-white transition-colors mb-4 text-sm font-medium">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+            <h1 class="text-3xl font-bold flex items-center gap-3">
+                <i class="ph-fill ph-buildings text-yellow-400 text-4xl"></i>
+                Chinese Government Scholarship (CSC)
+            </h1>
+            <p class="mt-2 text-orange-100 text-lg">Track your CSC Portal, BANBEIS application, and Secretariat hardcopy submission.</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 mt-8 space-y-8">
+        
+        <!-- Important Notice & Links Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 flex items-start gap-4">
+            <div class="p-3 bg-orange-50 text-orange-600 rounded-full shrink-0">
+                <i class="ph-fill ph-link text-2xl"></i>
+            </div>
+            <div class="w-full">
+                <h3 class="font-bold text-slate-800 flex justify-between items-center">
+                    <span>Essential Portals & Forms</span>
+                </h3>
+                <p class="text-sm text-slate-600 mt-1 mb-3">You will need to use multiple portals and download specific forms for this application. Keep these links handy:</p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://www.campuschina.org/index.html" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold bg-orange-600 hover:bg-orange-700 text-white px-3 py-2 rounded transition-colors shadow-sm">
+                        <i class="ph ph-globe"></i> CSC Portal
+                    </a>
+                    <a href="http://scholar.banbeis.gov.bd/cscchina/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded transition-colors shadow-sm">
+                        <i class="ph ph-globe"></i> BANBEIS Portal
+                    </a>
+                    <a href="https://ie.china-embassy.gov.cn/eng/tz/202511/P020251121080864900490.pdf" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold bg-slate-200 hover:bg-slate-300 text-slate-700 px-3 py-2 rounded transition-colors shadow-sm">
+                        <i class="ph ph-file-pdf"></i> Physical Exam Form
+                    </a>
+                    <a href="https://pcc.police.gov.bd/ords/r/pcc/pcc/home" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded transition-colors shadow-sm">
+                        <i class="ph ph-shield-check"></i> Police Clearance
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Left Column -->
+            <div class="space-y-8">
+                
+                <!-- Eligibility & Tracks -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 border-l-4 border-l-orange-500">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-list-checks text-orange-600 text-2xl"></i> Eligibility & Timeline
+                    </h2>
+                    
+                    <ul class="space-y-2 text-sm text-slate-700 mb-5">
+                        <li class="flex items-start gap-2">
+                            <i class="ph-bold ph-clock text-orange-500 mt-0.5"></i>
+                            <span><strong>Timeline:</strong> Opens in December, Deadline in January (varies by program).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-bold ph-user text-orange-500 mt-0.5"></i>
+                            <span><strong>Age Limit:</strong> Below 35 years for Master's programs.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-bold ph-translate text-orange-500 mt-0.5"></i>
+                            <span><strong>Language:</strong> IELTS/TOEFL/HSK not always mandatory. Medium is English (some require 1-year Chinese course).</span>
+                        </li>
+                    </ul>
+
+                    <h3 class="text-sm font-bold text-slate-800 mb-3 border-b border-slate-100 pb-1">Scholarship Categories</h3>
+                    
+                    <div class="space-y-3">
+                        <div class="bg-orange-50 p-3 rounded border border-orange-100">
+                            <h4 class="font-bold text-orange-800 text-sm">Type A - Chinese Embassy Track</h4>
+                            <ul class="list-disc list-inside text-xs text-orange-900 mt-1 space-y-1">
+                                <li>Agency Number for Bangladesh: <strong>0501</strong></li>
+                                <li>Announced via official BD circular.</li>
+                                <li>Can select up to 3 universities.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded border border-slate-200">
+                            <h4 class="font-bold text-slate-800 text-sm">Type B - University Track</h4>
+                            <ul class="list-disc list-inside text-xs text-slate-600 mt-1 space-y-1">
+                                <li>Apply directly to a Chinese university.</li>
+                                <li>Agency number depends on the university.</li>
+                                <li>Often requires contacting professors beforehand.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Document Checklist -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-files text-orange-600 text-2xl"></i> Document Checklist
+                    </h2>
+                    
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Application Forms & ID</h3>
+                    <div class="space-y-2 mb-4">
+                        <label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-slate-50 rounded transition-colors">
+                            <input type="checkbox" id="csc-doc-1" class="w-4 h-4 mt-0.5 save-state text-orange-600">
+                            <span class="text-sm text-slate-700">CSC Application Form (downloaded)</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-slate-50 rounded transition-colors">
+                            <input type="checkbox" id="csc-doc-2" class="w-4 h-4 mt-0.5 save-state text-orange-600">
+                            <span class="text-sm text-slate-700">Education Ministry Form (BANBEIS)</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-slate-50 rounded transition-colors">
+                            <input type="checkbox" id="csc-doc-3" class="w-4 h-4 mt-0.5 save-state text-orange-600">
+                            <span class="text-sm text-slate-700">Passport Copy</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-2 cursor-pointer hover:bg-slate-50 rounded transition-colors">
+                            <input type="checkbox" id="csc-doc-4" class="w-4 h-4 mt-0.5 save-state text-orange-600">
+                            <span class="text-sm text-slate-700">Passport-size Photo (White background, JPEG)</span>
+                        </label>
+                    </div>
+
+                    <h3 class="text-xs font-bold text-red-500 uppercase tracking-wider mb-2">Notarised Academic Docs</h3>
+                    <div class="space-y-2 mb-4 bg-red-50 p-3 rounded-lg border border-red-100">
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" id="csc-doc-5" class="w-4 h-4 mt-0.5 save-state text-red-600">
+                            <span class="text-sm font-medium text-red-900">SSC Certificate (Notarised)</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" id="csc-doc-6" class="w-4 h-4 mt-0.5 save-state text-red-600">
+                            <span class="text-sm font-medium text-red-900">HSC Certificate (Notarised)</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" id="csc-doc-7" class="w-4 h-4 mt-0.5 save-state text-red-600">
+                            <span class="text-sm font-medium text-red-900">Bachelor's Certificate (Notarised)</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" id="csc-doc-8" class="w-4 h-4 mt-0.5 save-state text-red-600">
+                            <span class="text-sm font-medium text-red-900">Academic Transcripts (Notarised)</span>
+                        </label>
+                    </div>
+
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Core Requirements</h3>
+                    <div class="space-y-3 mb-4">
+                        <label class="flex items-start gap-3 p-3 bg-slate-50 rounded border border-slate-200 cursor-pointer transition-colors">
+                            <input type="checkbox" id="csc-doc-9" class="w-5 h-5 mt-0.5 save-state text-orange-600">
+                            <div>
+                                <span class="text-sm font-bold text-slate-800 block">2 Recommendation Letters</span>
+                                <span class="text-xs text-slate-600 block mt-1">Must be from Asst/Assoc Professors. Must include Email, Phone, Institutional Seal, and Signature.</span>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 bg-slate-50 rounded border border-slate-200 cursor-pointer transition-colors">
+                            <input type="checkbox" id="csc-doc-10" class="w-5 h-5 mt-0.5 save-state text-orange-600">
+                            <div>
+                                <span class="text-sm font-bold text-slate-800 block">Study Plan / Research Proposal</span>
+                                <span class="text-xs text-slate-600 block mt-1">Minimum 1000 words. Include: Academic bg, Research field, Future plan, Why China/Uni.</span>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 bg-slate-50 rounded border border-slate-200 cursor-pointer transition-colors">
+                            <input type="checkbox" id="csc-doc-11" class="w-5 h-5 mt-0.5 save-state text-orange-600">
+                            <div>
+                                <span class="text-sm font-bold text-slate-800 block">Foreign Physical Exam Form</span>
+                                <span class="text-xs text-slate-600 block mt-1">Must be completed using the official template and valid for 6 months.</span>
+                            </div>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 bg-slate-50 rounded border border-slate-200 cursor-pointer transition-colors">
+                            <input type="checkbox" id="csc-doc-12" class="w-5 h-5 mt-0.5 save-state text-orange-600">
+                            <div>
+                                <span class="text-sm font-bold text-slate-800 block">Police Clearance Certificate</span>
+                                <span class="text-xs text-slate-600 block mt-1">Apply online via Bangladesh Police portal.</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Additional (If Applicable)</h3>
+                    <div class="grid grid-cols-2 gap-2">
+                        <label class="flex items-start gap-2 p-2 cursor-pointer"><input type="checkbox" id="csc-doc-13" class="w-4 h-4 mt-0.5 save-state"><span class="text-xs text-slate-600">IELTS Certificate</span></label>
+                        <label class="flex items-start gap-2 p-2 cursor-pointer"><input type="checkbox" id="csc-doc-14" class="w-4 h-4 mt-0.5 save-state"><span class="text-xs text-slate-600">Job Exp Certificate</span></label>
+                        <label class="flex items-start gap-2 p-2 cursor-pointer"><input type="checkbox" id="csc-doc-15" class="w-4 h-4 mt-0.5 save-state"><span class="text-xs text-slate-600">Publications/Papers</span></label>
+                        <label class="flex items-start gap-2 p-2 cursor-pointer"><input type="checkbox" id="csc-doc-16" class="w-4 h-4 mt-0.5 save-state"><span class="text-xs text-slate-600">ECA Certificates</span></label>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                
+                <!-- Application Steps -->
+                <section class="bg-orange-50 rounded-xl shadow-sm p-6 border border-orange-200">
+                    <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-orange-900">
+                        <i class="ph-fill ph-monitor-play text-orange-600 text-2xl"></i> Step 1: Online Applications
+                    </h2>
+                    
+                    <h3 class="text-sm font-bold text-orange-800 mb-2 border-b border-orange-200 pb-1">A. CSC Portal Application</h3>
+                    <div class="space-y-2 mb-5">
+                        <label class="flex items-start gap-2 cursor-pointer p-1.5 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="csc-step-1" class="w-4 h-4 mt-0.5 save-state text-orange-600">
+                            <span class="text-sm text-orange-900">Create account on CampusChina.org</span>
+                        </label>
+                        <label class="flex items-start gap-2 cursor-pointer p-1.5 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="csc-step-2" class="w-4 h-4 mt-0.5 save-state text-orange-600">
+                            <span class="text-sm text-orange-900">Fill out online application form & upload docs</span>
+                        </label>
+                        <label class="flex items-start gap-2 cursor-pointer p-1.5 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="csc-step-3" class="w-4 h-4 mt-0.5 save-state text-orange-600">
+                            <span class="text-sm font-bold text-orange-900">Submit & Download the completed CSC Form</span>
+                        </label>
+                    </div>
+
+                    <h3 class="text-sm font-bold text-orange-800 mb-2 border-b border-orange-200 pb-1">B. Bangladesh Ministry (Type A)</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-start gap-2 cursor-pointer p-1.5 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="csc-step-4" class="w-4 h-4 mt-0.5 save-state text-orange-600">
+                            <span class="text-sm text-orange-900">Go to scholar.banbeis.gov.bd/cscchina/</span>
+                        </label>
+                        <label class="flex items-start gap-2 cursor-pointer p-1.5 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="csc-step-5" class="w-4 h-4 mt-0.5 save-state text-orange-600">
+                            <span class="text-sm text-orange-900">Fill and submit the Ministry form online</span>
+                        </label>
+                        <label class="flex items-start gap-2 cursor-pointer p-1.5 hover:bg-white rounded transition-colors">
+                            <input type="checkbox" id="csc-step-6" class="w-4 h-4 mt-0.5 save-state text-orange-600">
+                            <span class="text-sm font-bold text-orange-900">Download the submitted BANBEIS application</span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Hardcopy Submission (Type A) -->
+                <section class="bg-amber-100 rounded-xl shadow-sm p-6 border border-amber-300">
+                    <h2 class="text-lg font-bold mb-3 flex items-center gap-2 text-amber-900">
+                        <i class="ph-fill ph-envelope-simple text-amber-700 text-2xl"></i> Step 2: Hardcopy Submission
+                    </h2>
+                    <p class="text-xs text-amber-800 mb-4 font-medium">All documents must be <strong>Notarised Photocopies</strong>, organized with page numbers, and placed in a <strong>single envelope</strong>.</p>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-amber-200 mb-4">
+                        <h4 class="font-bold text-slate-800 text-sm mb-2"><i class="ph-fill ph-map-pin"></i> Submission Location & Time</h4>
+                        <div class="text-sm text-slate-700 bg-slate-50 p-2 rounded border border-slate-200 font-medium">
+                            বাংলাদেশ সচিবালয়<br>
+                            ২ নং গেট সংলগ্ন অভ্যর্থনা কক্ষের ৯ নং কাউন্টার
+                        </div>
+                        <div class="mt-2 text-xs text-slate-600 font-bold">
+                            Time: 10:00 AM–11:00 AM OR 3:30 PM–4:30 PM
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-amber-200">
+                        <h4 class="font-bold text-slate-800 text-sm mb-2"><i class="ph-fill ph-pen"></i> Envelope Formatting</h4>
+                        <div class="grid grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <span class="font-bold text-slate-500 block mb-1">Sender Info (Top Left):</span>
+                                <ul class="list-disc list-inside text-slate-700 space-y-0.5">
+                                    <li>Name</li>
+                                    <li>Tracking ID</li>
+                                    <li>Program Name</li>
+                                    <li>Mobile & Email</li>
+                                    <li>Address</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="font-bold text-slate-500 block mb-1">Receiver (Center/Right):</span>
+                                <div class="text-slate-700 font-medium leading-tight">
+                                    যুগ্মসচিব (বৃত্তি)<br>
+                                    মাধ্যমিক ও উচ্চশিক্ষা বিভাগ<br>
+                                    শিক্ষা মন্ত্রণালয়<br>
+                                    বাংলাদেশ সচিবালয়, ঢাকা
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Target Universities Tracker -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-2 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-buildings text-orange-600 text-2xl"></i> Top 3 University Choices
+                    </h2>
+                    <div class="space-y-4 mt-4">
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <input type="text" id="csc-uni-1" placeholder="University 1 & Agency No..." class="w-full bg-transparent border-b border-slate-300 focus:border-orange-500 outline-none text-sm py-1 save-text">
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <input type="text" id="csc-uni-2" placeholder="University 2 & Agency No..." class="w-full bg-transparent border-b border-slate-300 focus:border-orange-500 outline-none text-sm py-1 save-text">
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <input type="text" id="csc-uni-3" placeholder="University 3 & Agency No..." class="w-full bg-transparent border-b border-slate-300 focus:border-orange-500 outline-none text-sm py-1 save-text">
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Javascript to handle saving progress automatically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.save-state');
+            checkboxes.forEach(box => {
+                const saved = localStorage.getItem(box.id);
+                if (saved === 'true') box.checked = true;
+                
+                box.addEventListener('change', (e) => {
+                    localStorage.setItem(e.target.id, e.target.checked);
+                    updateStrikeThrough(e.target);
+                });
+                updateStrikeThrough(box);
+            });
+
+            const textInputs = document.querySelectorAll('.save-text');
+            textInputs.forEach(input => {
+                const savedText = localStorage.getItem(input.id);
+                if (savedText) input.value = savedText;
+
+                input.addEventListener('input', (e) => {
+                    localStorage.setItem(e.target.id, e.target.value);
+                });
+            });
+
+            function updateStrikeThrough(checkbox) {
+                let textTarget = checkbox.nextElementSibling;
+                if(textTarget && textTarget.tagName === 'DIV') {
+                    textTarget = textTarget.querySelector('span'); 
+                }
+
+                if(textTarget && textTarget.tagName === 'SPAN') {
+                    if(checkbox.checked) {
+                        textTarget.classList.add('line-through', 'opacity-60');
+                    } else {
+                        textTarget.classList.remove('line-through', 'opacity-60');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
