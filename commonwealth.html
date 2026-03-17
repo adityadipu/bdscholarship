@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commonwealth Scholarship Tracker</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        input[type="checkbox"] {
+            accent-color: #0284c7; /* sky-600 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 font-sans pb-12">
+
+    <!-- Header -->
+    <header class="bg-sky-900 text-white py-8 shadow-md relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <a href="index.html" class="inline-flex items-center gap-2 text-sky-200 hover:text-white transition-colors mb-4 text-sm font-medium">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+            <h1 class="text-3xl font-bold flex items-center gap-3">
+                <i class="ph-fill ph-crown text-yellow-400 text-4xl"></i>
+                Commonwealth Scholarship (UK)
+            </h1>
+            <p class="mt-2 text-sky-100 text-lg">Track your UGC Bangladesh nomination, 6 development themes, and document submission.</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 mt-8 space-y-8">
+        
+        <!-- Important Notice Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 flex items-start gap-4">
+            <div class="p-3 bg-sky-50 text-sky-600 rounded-full shrink-0">
+                <i class="ph-fill ph-info text-2xl"></i>
+            </div>
+            <div class="w-full">
+                <h3 class="font-bold text-slate-800 flex justify-between items-center">
+                    <span>Crucial: Bangladesh UGC Route</span>
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded uppercase font-bold tracking-wider">Fully Funded</span>
+                </h3>
+                <p class="text-sm text-slate-600 mt-1 mb-3">You cannot apply directly to the UK initially. You must first apply through the <strong>University Grants Commission (UGC), Bangladesh</strong> for nomination. <strong>No offer letter and no job experience are required at the time of application!</strong></p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold bg-sky-600 hover:bg-sky-700 text-white px-3 py-2 rounded transition-colors shadow-sm">
+                        <i class="ph ph-link"></i> Official CSC Website
+                    </a>
+                    <a href="https://cscuk.fcdo.gov.uk/wp-content/uploads/2020/09/Guidance-Document-for-Applicants.docx" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold bg-slate-200 hover:bg-slate-300 text-slate-700 px-3 py-2 rounded transition-colors shadow-sm">
+                        <i class="ph ph-file-doc"></i> Guidance Document
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6 Development Themes -->
+        <section class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-sm p-6 text-white border border-slate-700">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-white">
+                <i class="ph-fill ph-target text-sky-400 text-2xl"></i> The 6 Development Themes
+            </h2>
+            <p class="text-xs text-slate-300 mb-4">Applicants <strong>MUST</strong> choose a subject directly aligned with one of the following themes. Your application essays must justify this alignment.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-700 transition-colors">
+                    <input type="checkbox" id="cw-theme-1" class="w-5 h-5 rounded save-state text-sky-500">
+                    <span class="text-sm font-semibold text-slate-100">1. Science & Technology for Development</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-700 transition-colors">
+                    <input type="checkbox" id="cw-theme-2" class="w-5 h-5 rounded save-state text-sky-500">
+                    <span class="text-sm font-semibold text-slate-100">2. Strengthening Health Systems</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-700 transition-colors">
+                    <input type="checkbox" id="cw-theme-3" class="w-5 h-5 rounded save-state text-sky-500">
+                    <span class="text-sm font-semibold text-slate-100">3. Promoting Global Prosperity</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-700 transition-colors">
+                    <input type="checkbox" id="cw-theme-4" class="w-5 h-5 rounded save-state text-sky-500">
+                    <span class="text-sm font-semibold text-slate-100">4. Promoting Global Peace, Security & Gov</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-700 transition-colors">
+                    <input type="checkbox" id="cw-theme-5" class="w-5 h-5 rounded save-state text-sky-500">
+                    <span class="text-sm font-semibold text-slate-100">5. Strengthening Resilience & Response to Crises</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-700 transition-colors">
+                    <input type="checkbox" id="cw-theme-6" class="w-5 h-5 rounded save-state text-sky-500">
+                    <span class="text-sm font-semibold text-slate-100">6. Access, Inclusion & Opportunity</span>
+                </label>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Left Column -->
+            <div class="space-y-8">
+                
+                <!-- Eligibility & Conditions -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 border-l-4 border-l-sky-500">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-graduation-cap text-sky-600 text-2xl"></i> Academic Requirements
+                    </h2>
+                    
+                    <div class="space-y-3 text-sm text-slate-700 mb-4 pb-4 border-b border-slate-100">
+                        <h3 class="font-bold text-slate-800">CGPA Classification:</h3>
+                        <p class="flex items-center gap-2"><i class="ph-bold ph-caret-right text-sky-500"></i> First Class: <strong>CGPA 4.00</strong></p>
+                        <p class="flex items-center gap-2"><i class="ph-bold ph-caret-right text-sky-500"></i> Upper Second Class: <strong>CGPA 3.30 - 3.90</strong></p>
+                        <p class="flex items-center gap-2"><i class="ph-bold ph-caret-right text-sky-500"></i> Lower Second Class: <strong>CGPA 2.70 - 3.30</strong></p>
+                    </div>
+
+                    <div class="bg-sky-50 p-3 rounded border border-sky-100 text-xs text-slate-700 mb-4">
+                        <strong class="text-sky-800">Academic results must clearly show:</strong><br>
+                        Total marks, Obtained marks, and Final classification (Excellent / Very Good / Good / Pass).
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm mb-2">Key Scholarship Conditions:</h3>
+                    <ul class="text-xs text-slate-600 space-y-2">
+                        <li class="flex items-start gap-1.5"><i class="ph-bold ph-airplane-tilt text-red-500 mt-0.5"></i> Must return to Bangladesh after completing studies.</li>
+                        <li class="flex items-start gap-1.5"><i class="ph-bold ph-prohibit text-red-500 mt-0.5"></i> Part-time jobs are NOT allowed during the scholarship period.</li>
+                    </ul>
+                </section>
+
+                <!-- Document Checklist -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-files text-sky-600 text-2xl"></i> Document Checklist
+                    </h2>
+                    <p class="text-xs text-red-600 mb-4 bg-red-50 p-2 rounded border border-red-100 font-bold">
+                        Academic certificates and transcripts must be notarised copies.
+                    </p>
+
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="cw-doc-1" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">Completed Application Form</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="cw-doc-2" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">Academic Certificates (Notarised)</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="cw-doc-3" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">Academic Transcripts (Notarised)</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="cw-doc-4" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">IELTS Certificate Copy</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="cw-doc-5" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">Passport-size Photograph</span>
+                        </label>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                
+                <!-- Application Steps -->
+                <section class="bg-sky-50 rounded-xl shadow-sm p-6 border border-sky-200">
+                    <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-sky-900">
+                        <i class="ph-fill ph-list-numbers text-sky-600 text-2xl"></i> Bangladesh Application Route
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors border border-transparent hover:border-sky-100">
+                            <input type="checkbox" id="cw-step-1" class="w-5 h-5 mt-0.5 save-state text-sky-600">
+                            <span class="text-sm text-sky-900 font-medium">1. Apply through the University Grants Commission (UGC), Bangladesh.</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors border border-transparent hover:border-sky-100">
+                            <input type="checkbox" id="cw-step-2" class="w-5 h-5 mt-0.5 save-state text-sky-600">
+                            <span class="text-sm text-sky-900 font-medium">2. Submit hard copy documents to UGC.</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors border border-transparent hover:border-sky-100">
+                            <input type="checkbox" id="cw-step-3" class="w-5 h-5 mt-0.5 save-state text-sky-600">
+                            <span class="text-sm text-sky-900 font-medium">3. Attend UGC's initial screening / viva (interview).</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors border border-transparent hover:border-sky-100">
+                            <input type="checkbox" id="cw-step-4" class="w-5 h-5 mt-0.5 save-state text-sky-600">
+                            <span class="text-sm text-sky-900 font-medium">4. Get nominated by the Ministry of Education, Bangladesh.</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors border border-transparent hover:border-sky-100">
+                            <input type="checkbox" id="cw-step-5" class="w-5 h-5 mt-0.5 save-state text-sky-600">
+                            <span class="text-sm text-sky-900 font-medium">5. Complete the official Commonwealth electronic application form.</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer p-2 hover:bg-white rounded transition-colors border border-transparent hover:border-sky-100">
+                            <input type="checkbox" id="cw-step-6" class="w-5 h-5 mt-0.5 save-state text-sky-600">
+                            <span class="text-sm text-sky-900 font-medium">6. Submit final documents as required on the portal.</span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- UGC Hardcopy Submission -->
+                <section class="bg-amber-50 rounded-xl shadow-sm p-6 border border-amber-200">
+                    <h2 class="text-lg font-bold mb-3 flex items-center gap-2 text-amber-900">
+                        <i class="ph-fill ph-map-pin text-amber-600 text-xl"></i> UGC Submission Address
+                    </h2>
+                    <p class="text-sm text-amber-800 mb-3">Hard copies for the initial nomination process must be sent to this exact address:</p>
+                    
+                    <div class="bg-white p-4 rounded shadow-sm border border-amber-200 text-sm text-slate-800 font-medium leading-relaxed">
+                        The Secretary<br>
+                        University Grants Commission of Bangladesh (UGC)<br>
+                        Agargaon, Administrative Area<br>
+                        Sher-E-Bangla Nagar<br>
+                        Dhaka-1207
+                    </div>
+                </section>
+
+                <!-- Timeline Note -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-md font-bold mb-2 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-clock text-sky-600 text-xl"></i> General Timeline Info
+                    </h2>
+                    <p class="text-sm text-slate-600 mb-2">The application and nomination process varies each year. Keep checking the official website for updates.</p>
+                    <div class="bg-slate-50 p-2 rounded text-xs font-bold text-slate-500 border border-slate-200 inline-block">
+                        Target Course Start: Sept / Oct 2026
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Javascript to handle saving progress automatically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.save-state');
+            checkboxes.forEach(box => {
+                const saved = localStorage.getItem(box.id);
+                if (saved === 'true') box.checked = true;
+                
+                box.addEventListener('change', (e) => {
+                    localStorage.setItem(e.target.id, e.target.checked);
+                    updateStrikeThrough(e.target);
+                });
+                updateStrikeThrough(box);
+            });
+
+            function updateStrikeThrough(checkbox) {
+                let textTarget = checkbox.nextElementSibling;
+                if(textTarget && textTarget.tagName === 'DIV') {
+                    textTarget = textTarget.querySelector('span'); 
+                }
+
+                if(textTarget && textTarget.tagName === 'SPAN') {
+                    if(checkbox.checked) {
+                        textTarget.classList.add('line-through', 'opacity-60');
+                    } else {
+                        textTarget.classList.remove('line-through', 'opacity-60');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
