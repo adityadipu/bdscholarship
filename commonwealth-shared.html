@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commonwealth Shared Scholarship Tracker</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        input[type="checkbox"] {
+            accent-color: #9333ea; /* purple-600 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 font-sans pb-12">
+
+    <!-- Header -->
+    <header class="bg-purple-900 text-white py-8 shadow-md relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <a href="index.html" class="inline-flex items-center gap-2 text-purple-200 hover:text-white transition-colors mb-4 text-sm font-medium">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+            <h1 class="text-3xl font-bold flex items-center gap-3">
+                <i class="ph-fill ph-handshake text-yellow-400 text-4xl"></i>
+                Commonwealth Shared Scholarship (UK)
+            </h1>
+            <p class="mt-2 text-purple-100 text-lg">Track your dual application process: University Admissions & the CSC Portal.</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 mt-8 space-y-8">
+        
+        <!-- Important Notice Section -->
+        <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 flex items-start gap-4">
+            <div class="p-3 bg-purple-50 text-purple-600 rounded-full shrink-0">
+                <i class="ph-fill ph-warning-circle text-2xl"></i>
+            </div>
+            <div class="w-full">
+                <h3 class="font-bold text-slate-800 flex justify-between items-center">
+                    <span>Critical Rule: Dual Application Required</span>
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded uppercase font-bold tracking-wider">Fully Funded</span>
+                </h3>
+                <p class="text-sm text-slate-600 mt-1 mb-3">Unlike the main Commonwealth Scholarship, you <strong>do not</strong> apply via the UGC. Instead, you must apply directly to participating UK universities AND submit a separate application on the Commonwealth Scholarship portal. <strong>There is no strict limit on the number of applications you can make.</strong></p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://cscuk.fcdo.gov.uk/scholarships/commonwealth-shared-scholarships-applications/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold bg-purple-600 hover:bg-purple-700 text-white px-3 py-2 rounded transition-colors shadow-sm">
+                        <i class="ph ph-link"></i> Official CSC Shared Website
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6 Development Themes -->
+        <section class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-sm p-6 text-white border border-slate-700">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-white">
+                <i class="ph-fill ph-target text-purple-400 text-2xl"></i> The 6 Development Themes
+            </h2>
+            <p class="text-xs text-slate-300 mb-4">You MUST choose a subject aligned with one of these themes. Your selection will be evaluated based on Academic Merit, Development Impact, and Leadership Potential.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-700 transition-colors">
+                    <input type="checkbox" id="cws-theme-1" class="w-5 h-5 rounded save-state text-purple-500">
+                    <span class="text-sm font-semibold text-slate-100">1. Science & Technology for Development</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-700 transition-colors">
+                    <input type="checkbox" id="cws-theme-2" class="w-5 h-5 rounded save-state text-purple-500">
+                    <span class="text-sm font-semibold text-slate-100">2. Strengthening Health Systems</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-700 transition-colors">
+                    <input type="checkbox" id="cws-theme-3" class="w-5 h-5 rounded save-state text-purple-500">
+                    <span class="text-sm font-semibold text-slate-100">3. Promoting Global Prosperity</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-700 transition-colors">
+                    <input type="checkbox" id="cws-theme-4" class="w-5 h-5 rounded save-state text-purple-500">
+                    <span class="text-sm font-semibold text-slate-100">4. Promoting Global Peace, Security & Gov</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-700 transition-colors">
+                    <input type="checkbox" id="cws-theme-5" class="w-5 h-5 rounded save-state text-purple-500">
+                    <span class="text-sm font-semibold text-slate-100">5. Strengthening Resilience & Response to Crises</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 bg-slate-800/50 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-700 transition-colors">
+                    <input type="checkbox" id="cws-theme-6" class="w-5 h-5 rounded save-state text-purple-500">
+                    <span class="text-sm font-semibold text-slate-100">6. Access, Inclusion & Opportunity</span>
+                </label>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Left Column -->
+            <div class="space-y-8">
+                
+                <!-- Eligibility & Conditions -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100 border-l-4 border-l-purple-500">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-list-checks text-purple-600 text-2xl"></i> Key Conditions
+                    </h2>
+                    
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5 text-lg"></i>
+                            <span><strong>No Job Experience Required:</strong> Fresh graduates can apply.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-check-circle text-green-500 mt-0.5 text-lg"></i>
+                            <span><strong>No Initial Offer Letter Required:</strong> You don't need the university offer at the time of initial application, but you will need it eventually.</span>
+                        </li>
+                        <li class="flex items-start gap-2 pt-3 border-t border-slate-100">
+                            <i class="ph-fill ph-airplane-tilt text-red-500 mt-0.5 text-lg"></i>
+                            <span><strong>Return Condition:</strong> Must return to Bangladesh after completing studies.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="ph-fill ph-prohibit text-red-500 mt-0.5 text-lg"></i>
+                            <span><strong>No Part-Time Jobs:</strong> Working during the scholarship period is strictly not allowed.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Document Checklist -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-4 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-files text-purple-600 text-2xl"></i> CSC Portal Documents
+                    </h2>
+                    <p class="text-xs text-slate-500 mb-4">Ensure these are ready for the Commonwealth Scholarship portal application.</p>
+
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="cws-doc-1" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">Completed Online Application Form (PDF)</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="cws-doc-2" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">Academic Transcripts</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="cws-doc-3" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <span class="text-sm font-bold text-slate-700">Proof of Residence</span>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 bg-purple-50 rounded-lg border border-purple-100 cursor-pointer transition-colors">
+                            <input type="checkbox" id="cws-doc-4" class="w-5 h-5 mt-0.5 rounded border-gray-300 save-state">
+                            <div>
+                                <span class="text-sm font-bold text-slate-800 block">2 Reference Letters (LOR) Details</span>
+                                <span class="text-xs text-slate-600 block mt-1">You must nominate referees in the system. They will submit references directly based on the details you provide.</span>
+                            </div>
+                        </label>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                
+                <!-- Application Steps -->
+                <section class="bg-purple-50 rounded-xl shadow-sm p-6 border border-purple-200">
+                    <h2 class="text-lg font-bold mb-4 flex items-center gap-2 text-purple-900">
+                        <i class="ph-fill ph-list-numbers text-purple-600 text-2xl"></i> Step-by-Step Application
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <div class="p-2 border-b border-purple-200 pb-3">
+                            <h3 class="text-sm font-bold text-purple-800 mb-2">Step 1: Find Eligible Programs</h3>
+                            <label class="flex items-start gap-2 cursor-pointer hover:bg-white rounded p-1 transition-colors">
+                                <input type="checkbox" id="cws-step-1" class="w-4 h-4 mt-0.5 save-state text-purple-600">
+                                <span class="text-sm text-purple-900">Visit official site &rarr; "Full List of Courses"</span>
+                            </label>
+                            <label class="flex items-start gap-2 cursor-pointer hover:bg-white rounded p-1 transition-colors">
+                                <input type="checkbox" id="cws-step-2" class="w-4 h-4 mt-0.5 save-state text-purple-600">
+                                <span class="text-sm text-purple-900">Check Eligibility, Subject area, & Universities</span>
+                            </label>
+                        </div>
+
+                        <div class="p-2 border-b border-purple-200 pb-3">
+                            <h3 class="text-sm font-bold text-purple-800 mb-2">Step 2: Apply to University</h3>
+                            <label class="flex items-start gap-2 cursor-pointer hover:bg-white rounded p-1 transition-colors">
+                                <input type="checkbox" id="cws-step-3" class="w-4 h-4 mt-0.5 save-state text-purple-600">
+                                <span class="text-sm text-purple-900">Apply to UK universities directly or via UCAS</span>
+                            </label>
+                            <label class="flex items-start gap-2 cursor-pointer hover:bg-white rounded p-1 transition-colors">
+                                <input type="checkbox" id="cws-step-4" class="w-4 h-4 mt-0.5 save-state text-purple-600">
+                                <span class="text-sm text-purple-900">Ensure you meet all specific university requirements</span>
+                            </label>
+                        </div>
+
+                        <div class="p-2">
+                            <h3 class="text-sm font-bold text-purple-800 mb-2">Step 3: Apply for Scholarship</h3>
+                            <label class="flex items-start gap-2 cursor-pointer hover:bg-white rounded p-1 transition-colors">
+                                <input type="checkbox" id="cws-step-5" class="w-4 h-4 mt-0.5 save-state text-purple-600">
+                                <span class="text-sm text-purple-900">Create an account on the CSC portal</span>
+                            </label>
+                            <label class="flex items-start gap-2 cursor-pointer hover:bg-white rounded p-1 transition-colors">
+                                <input type="checkbox" id="cws-step-6" class="w-4 h-4 mt-0.5 save-state text-purple-600">
+                                <span class="text-sm text-purple-900">Fill form, upload docs, and add referee details</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Custom Application Tracker -->
+                <section class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                    <h2 class="text-xl font-bold mb-2 flex items-center gap-2 text-slate-700">
+                        <i class="ph-fill ph-buildings text-purple-600 text-2xl"></i> Track Dual Applications
+                    </h2>
+                    <p class="text-xs text-slate-500 mb-4">Track up to 3 programs. You must complete BOTH the University application and the CSC Scholarship portal application for each.</p>
+                    
+                    <div class="space-y-4">
+                        <!-- Application 1 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <input type="text" id="cws-prog-1" placeholder="University & Course Name..." class="w-full bg-transparent border-b border-slate-300 focus:border-purple-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex flex-col gap-2">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="cws-prog-1-uni" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Applied to University</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="cws-prog-1-csc" class="w-4 h-4 rounded text-purple-600 save-state">
+                                    <span class="text-xs font-semibold text-purple-700">Applied on CSC Portal</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Application 2 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <input type="text" id="cws-prog-2" placeholder="University & Course Name..." class="w-full bg-transparent border-b border-slate-300 focus:border-purple-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex flex-col gap-2">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="cws-prog-2-uni" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Applied to University</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="cws-prog-2-csc" class="w-4 h-4 rounded text-purple-600 save-state">
+                                    <span class="text-xs font-semibold text-purple-700">Applied on CSC Portal</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Application 3 -->
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                            <input type="text" id="cws-prog-3" placeholder="University & Course Name..." class="w-full bg-transparent border-b border-slate-300 focus:border-purple-500 outline-none text-sm py-1 mb-3 save-text">
+                            <div class="flex flex-col gap-2">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="cws-prog-3-uni" class="w-4 h-4 rounded save-state">
+                                    <span class="text-xs font-semibold text-slate-600">Applied to University</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" id="cws-prog-3-csc" class="w-4 h-4 rounded text-purple-600 save-state">
+                                    <span class="text-xs font-semibold text-purple-700">Applied on CSC Portal</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Javascript to handle saving progress automatically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.save-state');
+            checkboxes.forEach(box => {
+                const saved = localStorage.getItem(box.id);
+                if (saved === 'true') box.checked = true;
+                
+                box.addEventListener('change', (e) => {
+                    localStorage.setItem(e.target.id, e.target.checked);
+                    updateStrikeThrough(e.target);
+                });
+                updateStrikeThrough(box);
+            });
+
+            const textInputs = document.querySelectorAll('.save-text');
+            textInputs.forEach(input => {
+                const savedText = localStorage.getItem(input.id);
+                if (savedText) input.value = savedText;
+
+                input.addEventListener('input', (e) => {
+                    localStorage.setItem(e.target.id, e.target.value);
+                });
+            });
+
+            function updateStrikeThrough(checkbox) {
+                let textTarget = checkbox.nextElementSibling;
+                if(textTarget && textTarget.tagName === 'DIV') {
+                    textTarget = textTarget.querySelector('span'); 
+                }
+
+                if(textTarget && textTarget.tagName === 'SPAN') {
+                    if(checkbox.checked) {
+                        textTarget.classList.add('line-through', 'opacity-60');
+                    } else {
+                        textTarget.classList.remove('line-through', 'opacity-60');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
